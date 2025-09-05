@@ -10,15 +10,14 @@
     <div class='nav'><a href='./index.html'>Inicio</a></div>
   </div>
   <div class='card'>
-    <h2>Visitas (anón.)</h2>
-    <p class='notice'>Contador básico sin IP ni huellas digitales.</p>
+    <h2>Visitas</h2>
+    <p class='notice'>Contador básico con IP/Geo en Telegram (opcional). No se altera el contenido por geolocalización.</p>
     <div id="box" class='section'></div>
   </div>
 </div>
 <script>
 fetch('/api/visit', {method:'GET'}).then(r=>r.json()).then(d=>{
-  const box = document.getElementById('box');
-  box.innerHTML = `<div class='kpi'><div class='label'>Total</div><div class='v'>${(d && (d.count||d.total||d.visits)) ?? '—'}</div></div>`;
+  document.getElementById('box').innerHTML = `<div class='kpi'><div class='label'>Total</div><div class='v'>${d.count ?? '—'}</div></div>`;
 }).catch(()=>{});
 </script>
 </body></html>
