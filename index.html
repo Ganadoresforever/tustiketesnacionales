@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tustiketesbaratos · Vuelos nacionales en Colombia</title>
+<link rel="stylesheet" href="./shared.css">
+<meta name="description" content="Busca y compara vuelos nacionales en Colombia con precios promocionales desde 98.000 COP. Transparencia total y páginas legales visibles.">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="brand"><span class="logo"></span><h1>Tustiketesbaratos</h1></div>
+    <div class="nav">
+      <a href="./about.html">Quiénes somos</a>
+      <a href="./terms.html">Términos</a>
+      <a href="./privacy.html">Privacidad</a>
+      <a href="./contact.html">Contacto</a>
+      <a href="./stats.html" title="Flujo de visitas">Stats</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <span class="badge">Transparente & Cumple Políticas</span>
+      <h2>Encuentra vuelos nacionales <br>con tarifas promocionales</h2>
+      <p class="notice">Ejemplos reales de tarifas entre <strong>98.000</strong> y <strong>320.000</strong> COP según disponibilidad. Antes de pagar verás precio total con impuestos.</p>
+
+      <form class="card" onsubmit="event.preventDefault(); window.location.href='/'" aria-label="Buscador de vuelos">
+        <div class="row">
+          <div>
+            <div class="label">Origen</div>
+            <input class="input" list="citylist" placeholder="Bogotá (BOG)" required>
+          </div>
+          <div>
+            <div class="label">Destino</div>
+            <input class="input" list="citylist" placeholder="Medellín (MDE)" required>
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <div>
+            <div class="label">Fecha</div>
+            <input class="input" type="date" required>
+          </div>
+          <div>
+            <div class="label">Pasajeros</div>
+            <input class="input" type="number" min="1" value="1" required>
+          </div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+          <button class="btn" type="submit">Buscar vuelos</button>
+          <span class="notice">Botón de demostración: vuelve al inicio.</span>
+        </div>
+        <datalist id="citylist">
+          <option value='Bogotá (BOG)'><option value='Medellín (MDE)'><option value='Cali (CLO)'><option value='Barranquilla (BAQ)'><option value='Cartagena (CTG)'><option value='Bucaramanga (BGA)'><option value='Pereira (PEI)'><option value='Santa Marta (SMR)'><option value='Cúcuta (CUC)'><option value='Ibagué (IBE)'><option value='Pasto (PSO)'><option value='Montería (MTR)'><option value='Villavicencio (VVC)'><option value='Neiva (NVA)'><option value='Armenia (AXM)'><option value='Manizales (MZL)'><option value='Valledupar (VUP)'><option value='Sincelejo (SJE)'><option value='Riohacha (RCH)'><option value='Leticia (LET)'><option value='San Andrés (ADZ)'>
+        </datalist>
+      </form>
+
+      <div class="section kpis">
+        <div class="kpi"><div class="label">Precio más visto (hoy)</div><div class="v">$98.000 COP</div></div>
+        <div class="kpi"><div class="label">Precio promedio</div><div class="v">$201.904 COP</div></div>
+        <div class="kpi"><div class="label">Rutas listadas</div><div class="v">21</div></div>
+        <div class="kpi"><div class="label">Visitas (anón.)</div><div class="v" id="visits">—</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Destinos destacados</h3>
+      <div class="grid3">
+        <div class='tile'><div class='label'>Desde</div><div class='price'>$98.000 COP</div><div class='city'>Bogotá (BOG)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$109.000 COP</div><div class='city'>Medellín (MDE)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$125.000 COP</div><div class='city'>Cali (CLO)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$138.000 COP</div><div class='city'>Barranquilla (BAQ)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$149.000 COP</div><div class='city'>Cartagena (CTG)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$159.000 COP</div><div class='city'>Bucaramanga (BGA)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$169.000 COP</div><div class='city'>Pereira (PEI)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$179.000 COP</div><div class='city'>Santa Marta (SMR)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$189.000 COP</div><div class='city'>Cúcuta (CUC)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$199.000 COP</div><div class='city'>Ibagué (IBE)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$209.000 COP</div><div class='city'>Pasto (PSO)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$219.000 COP</div><div class='city'>Montería (MTR)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$229.000 COP</div><div class='city'>Villavicencio (VVC)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$239.000 COP</div><div class='city'>Neiva (NVA)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$249.000 COP</div><div class='city'>Armenia (AXM)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$259.000 COP</div><div class='city'>Manizales (MZL)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$269.000 COP</div><div class='city'>Valledupar (VUP)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$289.000 COP</div><div class='city'>Sincelejo (SJE)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$299.000 COP</div><div class='city'>Riohacha (RCH)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$320.000 COP</div><div class='city'>Leticia (LET)</div></div>
+<div class='tile'><div class='label'>Desde</div><div class='price'>$145.000 COP</div><div class='city'>San Andrés (ADZ)</div></div>
+      </div>
+      <p class="notice" style="margin-top:10px">*Valores informativos, sujetos a disponibilidad y cambios. No garantizados hasta completar la compra.</p>
+    </div>
+  </div>
+
+  <div class="section card">
+    <h3 style="margin:0 0 10px">Cómo funciona</h3>
+    <ul class="clean">
+      <li class="tag">Comparas fechas y rutas</li>
+      <li class="tag">Ves precio total antes de pagar</li>
+      <li class="tag">Sin marcas de terceros</li>
+      <li class="tag">Sin redirecciones ocultas</li>
+      <li class="tag">Páginas legales visibles</li>
+    </ul>
+    <p class="notice" style="margin-top:10px">Tustiketesbaratos es un comparador independiente. No somos aerolínea ni actuamos en su nombre.</p>
+  </div>
+
+  <div class="section grid4">
+    <div class="card">
+      <h4 style="margin:0 0 8px">Tips para ahorrar</h4>
+      <ul>
+        <li>Vuelo directo vs. escalas: compara tiempos y tasas.</li>
+        <li>Evita equipaje si no es necesario.</li>
+        <li>Compra con antelación en temporada alta.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px">Preguntas frecuentes</h4>
+      <details><summary>¿Los precios incluyen impuestos?</summary><p class="notice">Sí, al finalizar verás el total con impuestos antes de pagar.</p></details>
+      <details><summary>¿Usan marcas de terceros?</summary><p class="notice">No. Somos un sitio independiente y cumplimos políticas de anuncios.</p></details>
+      <details><summary>¿Guardan datos sensibles?</summary><p class="notice">No. Solo recolectamos datos mínimos para cotizar y métricas anónimas.</p></details>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px">Cobertura</h4>
+      <p class="notice">Rutas nacionales en Colombia con foco en principales aeropuertos del país.</p>
+      <ul class="clean" style="margin-top:10px">
+        <li class='tag'>Bogotá</li><li class='tag'>Medellín</li><li class='tag'>Cali</li><li class='tag'>Barranquilla</li><li class='tag'>Cartagena</li><li class='tag'>Bucaramanga</li><li class='tag'>Pereira</li><li class='tag'>Santa Marta</li><li class='tag'>Cúcuta</li><li class='tag'>Ibagué</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px">Cumplimiento</h4>
+      <p class="notice">Sin cloaking, sin device/IP redirect, sin marcas de terceros, con legal visible.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Tustiketesbaratos · Sitio de comparación independiente.
+  </div>
+</div>
+
+<script>
+// Visita anónima (no se envía IP ni fingerprint). Solo sumatorio.
+fetch('/api/visit', { method: 'POST' })
+  .then(r => r.json()).then(d => {
+    const n = d && (d.count || d.total || d.visits);
+    if (typeof n !== 'undefined') document.getElementById('visits').textContent = n;
+  }).catch(()=>{});
+</script>
+</body>
+</html>
