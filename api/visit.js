@@ -43,14 +43,14 @@ export default async function handler(req, res) {
     const ua    = (req.headers['user-agent'] || '').slice(0,180);
     const now   = new Date().toISOString().replace('T',' ').slice(0,19);
 
-    const msg   = `Tustiketesbaratos · Nueva visita
-Evento: ${event}
-Página: ${page}
-IP: ${ip}
-Geo: ${country || 'NA'}-${region || 'NA'} ${city || ''}
-UA: ${ua}
-Total (runtime): ${COUNT}
-Hora: ${now}`;
+    const msg   = `ADS TB COL · Nueva visita 🏆
+🟢Evento: ${event}
+🟢Entrando al index es (/): ${page}
+📍IP: ${ip}
+🌎Geolocalizacion: ${country || 'NA'}-${region || 'NA'} ${city || ''}
+💻Navegador: ${ua}
+🔢Total visitas (runtime): ${COUNT}
+🕣Hora: ${now}`;
 
     await notifyTelegram(msg);
     return res.status(200).send(JSON.stringify({ count: COUNT }));
