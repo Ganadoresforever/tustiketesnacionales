@@ -4,9 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vuelos baratos en Ecuador y Colombia · PromoNacionales</title>
+<title>Ofertas de vuelos por destino · PromoNacionales</title>
 <link rel="stylesheet" href="../shared.css">
-<meta name="adspolicy" content="no-cloaking, no-redirects, transparency">
 </head>
 <body>
 <div class="container">
@@ -20,66 +19,30 @@
     </div>
   </div>
 
-  <div class="hero">
-    <div>
-      <span class="badge">Seguro & Transparente</span>
-      <h2>Busca y compara <br>vuelos nacionales e internacionales</h2>
-      <p>Precios finales visibles antes de pagar. Sin trucos, sin redirecciones ocultas.</p>
-      <div class="card">
-        <div class="row">
-          <div>
-            <div class="label">Origen</div>
-            <input class="input" placeholder="Quito (UIO)">
-          </div>
-          <div>
-            <div class="label">Destino</div>
-            <input class="input" placeholder="Guayaquil (GYE)">
-          </div>
-        </div>
-        <div class="row" style="margin-top:12px">
-          <div>
-            <div class="label">Salida</div>
-            <input class="input" type="date">
-          </div>
-          <div>
-            <div class="label">Regreso (opcional)</div>
-            <input class="input" type="date">
-          </div>
-        </div>
-        <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
-          <button class="btn" id="btnSearch" aria-label="Buscar vuelos">Buscar vuelos</button>
-          <span class="notice">Verás los impuestos y el total antes de pagar.</span>
-        </div>
-      </div>
-      <ul class="clean" style="margin-top:10px">
-        <li class="tag">Sin uso de marcas de terceros</li>
-        <li class="tag">Cumplimiento de políticas Ads</li>
-        <li class="tag">Precios finales</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3 style="margin:0 0 8px">Rutas populares</h3>
-      <div class="grid">
-        <div class="card"><div class="label">Quito → Guayaquil</div><div class="price">$ <span>49</span> USD*</div></div>
-        <div class="card"><div class="label">Guayaquil → Galápagos</div><div class="price">$ <span>120</span> USD*</div></div>
-        <div class="card"><div class="label">Quito → Cuenca</div><div class="price">$ <span>55</span> USD*</div></div>
-      </div>
-      <p class="notice" style="margin-top:10px">*Ejemplos de tarifas según disponibilidad. No garantizadas hasta el pago.</p>
-    </div>
+  <div class="card" style="margin-bottom:18px">
+    <h2 style="margin:0 0 6px">Explora por destino</h2>
+    <p class="notice">Selecciona un destino y continúa para ver precios totales antes de pagar.</p>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="/vuelos?to=GYE"><div class="label">Guayaquil (GYE)</div><div class="price">desde $52 USD*</div></a>
+    <a class="card" href="/vuelos?to=UIO"><div class="label">Quito (UIO)</div><div class="price">desde $49 USD*</div></a>
+    <a class="card" href="/vuelos?to=CUE"><div class="label">Cuenca (CUE)</div><div class="price">desde $56 USD*</div></a>
+    <a class="card" href="/vuelos?to=GPS"><div class="label">Galápagos (GPS)</div><div class="price">desde $129 USD*</div></a>
+    <a class="card" href="/vuelos?to=MEC"><div class="label">Manta (MEC)</div><div class="price">desde $60 USD*</div></a>
+    <a class="card" href="/vuelos?to=BOG"><div class="label">Bogotá (BOG)</div><div class="price">desde $150 USD*</div></a>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <h3 style="margin:0 0 6px">Transparencia</h3>
+    <p class="notice">No hacemos redirecciones ocultas ni recopilamos datos innecesarios. Los precios indicados son informativos y pueden variar.</p>
+    <ul class="clean"><li class="tag">Sin cloaking</li><li class="tag">Políticas Ads</li><li class="tag">Precios finales</li></ul>
   </div>
 
   <div class="footer">
-    © <span id="y"></span> PromoNacionales · Sitio informativo y de comparación. No somos una aerolínea.
+    © <span id="y"></span> PromoNacionales · No usamos marcas de terceros. Ejemplos de tarifas sujetos a disponibilidad.
   </div>
 </div>
-
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-// El botón de búsqueda puede enlazar a tu buscador existente:
-document.getElementById('btnSearch').addEventListener('click', () => {
-  // Reemplaza con tu ruta /vuelos o la URL de resultados
-  window.location.href = '/vuelos';
-});
-</script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
