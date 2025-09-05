@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ofertas de vuelos por destino · PromoNacionales</title>
+<title>Compara por fechas · PromoNacionales</title>
 <link rel="stylesheet" href="../shared.css">
 </head>
 <body>
@@ -19,28 +19,48 @@
     </div>
   </div>
 
-  <div class="card" style="margin-bottom:18px">
-    <h2 style="margin:0 0 6px">Explora por destino</h2>
-    <p class="notice">Selecciona un destino y continúa para ver precios totales antes de pagar.</p>
-  </div>
-
-  <div class="grid">
-    <a class="card" href="/vuelos?to=GYE"><div class="label">Guayaquil (GYE)</div><div class="price">desde $52 USD*</div></a>
-    <a class="card" href="/vuelos?to=UIO"><div class="label">Quito (UIO)</div><div class="price">desde $49 USD*</div></a>
-    <a class="card" href="/vuelos?to=CUE"><div class="label">Cuenca (CUE)</div><div class="price">desde $56 USD*</div></a>
-    <a class="card" href="/vuelos?to=GPS"><div class="label">Galápagos (GPS)</div><div class="price">desde $129 USD*</div></a>
-    <a class="card" href="/vuelos?to=MEC"><div class="label">Manta (MEC)</div><div class="price">desde $60 USD*</div></a>
-    <a class="card" href="/vuelos?to=BOG"><div class="label">Bogotá (BOG)</div><div class="price">desde $150 USD*</div></a>
-  </div>
-
-  <div class="card" style="margin-top:18px">
-    <h3 style="margin:0 0 6px">Transparencia</h3>
-    <p class="notice">No hacemos redirecciones ocultas ni recopilamos datos innecesarios. Los precios indicados son informativos y pueden variar.</p>
-    <ul class="clean"><li class="tag">Sin cloaking</li><li class="tag">Políticas Ads</li><li class="tag">Precios finales</li></ul>
+  <div class="hero">
+    <div>
+      <h2>Encuentra fechas con mejor tarifa</h2>
+      <p class="notice">Compara rápidamente y continúa a resultados. Mostramos el precio total antes del pago.</p>
+      <div class="card">
+        <div class="row">
+          <div>
+            <div class="label">Origen</div>
+            <input class="input" placeholder="Quito (UIO)">
+          </div>
+          <div>
+            <div class="label">Destino</div>
+            <input class="input" placeholder="Galápagos (GPS)">
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <div>
+            <div class="label">Mes</div>
+            <input class="input" type="month">
+          </div>
+          <div>
+            <div class="label">Pasajeros</div>
+            <input class="input" type="number" min="1" value="1">
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <button class="btn" onclick="window.location.href='/vuelos'">Ver vuelos</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Consejos</h3>
+      <ul>
+        <li>Busca con flexibilidad de fechas.</li>
+        <li>Evita equipaje si no lo necesitas para ahorrar.</li>
+        <li>Compra con antelación en rutas populares.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="footer">
-    © <span id="y"></span> PromoNacionales · No usamos marcas de terceros. Ejemplos de tarifas sujetos a disponibilidad.
+    © <span id="y"></span> PromoNacionales · Sitio de comparación independiente.
   </div>
 </div>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
