@@ -55,7 +55,7 @@ function renderVuelos() {
       const ciudad = btn.getAttribute('data-ciudad');
       const textarea = document.querySelector('#contactForm textarea[name="mensaje"]');
       if (textarea) {
-        textarea.value = `Quiero cotizar vuelo a ${ciudad}. Fechas: __ / __ / __ . Pasajeros: __.`;
+        textarea.value = `Quiero cotizar vuelo a ${ciudad}. -Fechas:  -Pasajeros: `;
       }
     });
   });
