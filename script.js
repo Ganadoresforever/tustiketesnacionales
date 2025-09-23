@@ -32,7 +32,7 @@ function crearCardVuelo(v) {
   div.innerHTML = `
     <div class="flight-media"><img src="${v.img}" alt="Vuelo a ${v.ciudad}" /></div>
     <div class="flight-body">
-      <h3>🟢​​ ${v.ciudad}</h3>
+      <h3>​​ ${v.ciudad}</h3>
       <div class="price">Desde ${v.desde}</div>
       <div class="tags"><span class="tag">${v.tag}</span><span class="tag">Cupos limitados</span></div>
       <div style="margin-top:12px">
