@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tus promociones Nacionales | Vuelos baratos en Colombia todos los destinos</title>
+  <meta name="description" content="Las mejores promociones en toda colombia sin problemas de demora. Atención rápida, precios bajos y soporte confiable. Reserva hoy.">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17585031466"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17585031466');
+</script>
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Tu próximo vuelo al mejor precio</h1>
+      <p>Vuelos nacionales en Colombia y destinos internacionales con ofertas limitadas.</p>
+      <a href="#contacto" class="btn btn-primary">Reserva ahora</a>
+    </div>
+  </header>
+
+  <!-- Beneficios -->
+  <section class="section container">
+    <h2 class="section-title">¿Por qué reservar con nosotros?</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>💰 Ahorro real</h3>
+        <p>Encontramos tarifas bajas y promociones para que pagues menos.</p>
+      </div>
+      <div class="card">
+        <h3>⚡️ Respuesta rápida</h3>
+        <p>Te atendemos enseguida y confirmamos tu reserva en minutos.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Confianza</h3>
+        <p>Atención humana y segura. Miles de clientes satisfechos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vuelos nacionales -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Vuelos Nacionales</h2>
+        <span class="badge">Desde $89.000 COP</span>
+      </div>
+      <div id="grid-nacionales" class="grid-4 flights-grid"></div>
+      <div class="center">
+        <a href="#contacto" class="btn btn-outline">Quiero cotizar un vuelo nacional</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vuelos internacionales -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Vuelos Internacionales</h2>
+        <span class="badge">Desde $249 USD</span>
+      </div>
+      <div id="grid-internacionales" class="grid-4 flights-grid"></div>
+      <div class="center">
+        <a href="#contacto" class="btn btn-outline">Quiero cotizar un vuelo internacional</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonio -->
+  <section class="section container">
+    <h2 class="section-title">Opiniones de clientes</h2>
+    <div class="quote">
+      <p>"Conseguí mejor precio que en otras webs y me respondieron de una. ¡Recomendados!"</p>
+      <span>– Camila R.</span>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section bg-dark">
+    <div class="container form-wrap">
+      <div class="form-copy">
+        <h2 class="section-title light">¿Listo para viajar?</h2>
+        <p class="light">Cuéntanos tu ruta, fechas y número de pasajeros. Te respondemos rápido.</p>
+      </div>
+      <form id="contactForm" class="card form-card">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <textarea name="mensaje" placeholder="Ruta, fechas, pasajeros..." required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Colombia Nacionales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

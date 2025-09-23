@@ -1,0 +1,174 @@
+/* Reset básico */
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.5}
+img{max-width:100%;display:block}
+
+/* Utilidades */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.section{padding:64px 0}
+.section-title{font-size:28px;margin:0 0 16px}
+.section-header{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.center{text-align:center}
+.badge{background:#eef6ff;color:#0b6ef9;font-weight:600;border-radius:999px;padding:6px 12px;font-size:14px}
+.light{color:#f5f7fb}
+
+/* Botones */
+.btn{display:inline-block;padding:2px 7px;border-radius:8px;font-weight:700;text-decoration:none}
+.btn-primary{background:#0b6ef9;color:#fff;border:2px solid #0b6ef9}
+.btn-primary:hover{filter:brightness(0.95)}
+.btn-outline{border:2px solid #0b6ef9;color:#0b6ef9}
+.btn-outline:hover{background:#0b6ef9;color:#fff}
+
+/* Hero */
+.hero{position:relative;min-height:56vh;background:url('hero.jpg') center/cover no-repeat;display:flex;align-items:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.45))}
+.hero-content{position:relative;color:#fff;text-align:center;padding:48px 0}
+.hero h1{font-size:40px;margin:0 0 12px}
+.hero p{margin:0 0 16px;font-size:18px}
+
+/* Tarjetas y grids */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1024px){.grid-4{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.grid-3,.grid-4{grid-template-columns:repeat(1,1fr)}}
+
+.card{background:#fff;border:1px solid #e9eef5;border-radius:16px;padding:18px;box-shadow:0 6px 18px rgba(4,20,69,.06)}
+.card h3{margin:0 0 8px}
+
+/* Flights */
+.flights-grid .flight-card{padding:0;overflow:hidden}
+.flight-media{height:140px;background:#eaf2ff}
+.flight-body{padding:16px}
+.price{font-weight:800;font-size:18px;margin:4px 0 12px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:#f2f4f7;border:1px solid #e5e7eb;border-radius:999px;padding:2px 10px;font-size:12px}
+
+/* Formulario */
+.bg-light{background:#f8fbff}
+.bg-dark{background:#0d1b2a}
+.form-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.form-card{display:grid;gap:12px}
+.form-card input,.form-card textarea{width:100%;padding:14px 12px;border:1px solid #d6dbe4;border-radius:12px;font-size:15px}
+.form-card textarea{min-height:120px;resize:vertical}
+.form-msg{margin:8px 0 0;font-size:14px}
+@media(max-width:900px){.form-wrap{grid-template-columns:1fr}}
+
+/* Quote */
+.quote{border-left:4px solid #0b6ef9;padding:12px 16px;background:#f7fbff;border-radius:10px}
+
+/* Footer */
+.footer{background:#0f172a;color:#cbd5e1;padding:18px 0;text-align:center}
+
+/* === PATCH compact cards & alignment (Sept 2025) === */
+.flights-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.card.flight-card{
+  padding: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.flight-media{
+  height: 120px;
+  background: #eaf2ff;
+}
+.flight-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flight-body{
+  padding: 14px 14px 16px;
+}
+.flight-body h3{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0 6px;
+}
+.price{
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+.tags{ 
+  justify-content: center;
+  gap: 6px;
+}
+.tag{ 
+  font-size: 12px;
+  padding: 3px 10px;
+}
+@media (min-width: 1200px){
+  .flights-grid{ gap: 18px; }
+  .card.flight-card{ max-width: 260px; }
+}
+@media (max-width: 768px){
+  .card.flight-card{ max-width: 100%; }
+  .flight-media{ height: 110px; }
+  .flight-body h3{ font-size: 15px; }
+  .price{ font-size: 17px; }
+}
+/* === END PATCH === */
+
+
+/* === ULTRA PATCH: uniform image sizing across all cards === */
+.flights-grid .card img,
+.flights-grid .flight-card img,
+.flights-grid .card .flight-media img,
+.flights-grid .card a > img:first-child,
+.flights-grid .card picture > img:first-child {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important; /* misma altura proporcional */
+  object-fit: cover !important;
+  display: block;
+}
+
+.flights-grid .card .flight-media,
+.flights-grid .card .media,
+.flights-grid .card .image,
+.flights-grid .card picture {
+  width: 100%;
+  display: block;
+}
+/* === END ULTRA PATCH === */
+
+/* === ULTRA PATCH: uniform image sizing across all cards === */
+.flights-grid .card img,
+.flights-grid .flight-card img,
+.flights-grid .card .flight-media img,
+.flights-grid .card a > img:first-child,
+.flights-grid .card picture > img:first-child {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.flights-grid .card .flight-media,
+.flights-grid .card .media,
+.flights-grid .card .image,
+.flights-grid .card picture {
+  width: 100% !important;
+  display: block !important;
+}
+
+/* === MOBILE PATCH (<=640px): fix overlays, font sizes, spacing, and grid === */
+@media (max-width: 640px){
+  .flights-grid{ grid-template-columns: 1fr !important; gap: 16px !important; }
+  .card.flight-card{ max-width: 100% !important; border-radius: 16px !important; }
+  .flight-media{ height: px !important; overflow: hidden !important; }
+  .flight-media img{ width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; }
+  .flight-body{ position: static !important; margin-top:0 !important; padding:14px 16px 18px !important; background:#fff !important; }
+  .flight-body h3{ font-size:16px !important; line-height:1.25 !important; margin:8px 0 6px !important; text-align:center !important; }
+  .price{ font-size:18px !important; line-height:1.2 !important; margin:0 0 10px !important; text-align:center !important; }
+  .tags{ position:static !important; display:flex !important; flex-wrap:wrap !important; justify-content:center !important; gap:6px !important; margin:6px 0 12px !important; }
+  .tag{ font-size:12px !important; padding:4px 10px !important; }
+  .card.flight-card .btn,.flight-card .btn,.flight-body .btn{ width:75% !important; margin:0 auto !important; display:block !important; }
+}
